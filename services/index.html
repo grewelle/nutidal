@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Okeke LLC - Consulting, Development & Growth</title>
+    <meta name="description" content="Software development, technical consulting, cloud architecture, and growth strategy. We help businesses build better products and scale smarter.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Services | Okeke LLC">
+    <meta property="og:description" content="Consulting, development, cloud architecture, and growth strategy for businesses ready to scale.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://okeke.us/services/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Services | Okeke LLC">
+    <meta name="twitter:description" content="Consulting, development, cloud architecture, and growth strategy.">
+    <meta name="twitter:image" content="https://okeke.us/images/consultant-discussion.jpg">
+    <meta property="og:image" content="https://okeke.us/images/consultant-discussion.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:alt" content="Professional consultation meeting - Okeke LLC Services">
+
+    <link rel="canonical" href="https://okeke.us/services/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+    <!-- Snowfall Canvas -->
+    <canvas id="snowfall" aria-hidden="true"></canvas>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/images/logo.png" alt="Okeke LLC" width="50" height="50">
+                Okeke LLC
+            </a>
+            <div class="nav-links">
+                <a href="/services/" class="active">Services</a>
+                <a href="/research/">Research</a>
+                <a href="/apps/">Apps</a>
+                <a href="/about/">About</a>
+                <a href="/contact/" class="nav-cta">Get in Touch</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <header class="page-hero">
+            <div class="container">
+                <a href="/" class="back-link">← Home</a>
+                <h1>Services</h1>
+                <p class="page-subtitle">We build software and help businesses grow. Whether you need a new product, technical guidance, or help scaling what you've already built — we've been there, and we can help.</p>
+            </div>
+        </header>
+
+        <!-- Core Value Prop -->
+        <section class="section">
+            <div class="container">
+                <div class="value-prop-grid">
+                    <div class="value-prop">
+                        <h2>Why work with us?</h2>
+                        <p>We're not just consultants who advise — we're builders who ship. Every recommendation we make, we've tested on our own products. Every technology we suggest, we've used in production. That's the difference between theory and experience.</p>
+                    </div>
+                    <div class="value-prop-image">
+                        <img src="/images/consultant-discussion.jpg" alt="Professional consultation meeting discussing software strategy" width="1200" height="800" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="section services-detail-section">
+            <div class="container">
+                <h2>What We Offer</h2>
+
+                <!-- Technical Consulting -->
+                <article class="service-detail" id="consulting">
+                    <button class="service-detail-header" aria-expanded="false" aria-controls="consulting-content">
+                        <span class="service-number">01</span>
+                        <h3>Technical Consulting</h3>
+                        <span class="service-toggle" aria-hidden="true"></span>
+                    </button>
+                    <div class="service-detail-content" id="consulting-content">
+                        <p class="service-lead">Make the right decisions before you write a line of code.</p>
+                        <p>Technology choices have long-term consequences. The wrong architecture can cost months of rework. The wrong stack can limit your options when it's time to scale. We help you think through these decisions early, when it's cheap to change course.</p>
+
+                        <div class="service-offerings">
+                            <h4>How we help:</h4>
+                            <ul>
+                                <li><strong>Architecture Review</strong> — Evaluate your current system design and identify bottlenecks, security risks, and scaling limitations</li>
+                                <li><strong>Technology Selection</strong> — Choose the right languages, frameworks, and tools for your specific needs and constraints</li>
+                                <li><strong>Technical Due Diligence</strong> — Assess technology assets for investors, acquirers, or partners</li>
+                                <li><strong>Team Augmentation</strong> — Provide senior technical guidance to your existing team</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-ideal">
+                            <h4>Ideal for:</h4>
+                            <p>Startups planning their technical foundation, businesses considering a major platform change, or teams that need a second opinion on critical decisions.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product Development -->
+                <article class="service-detail" id="development">
+                    <button class="service-detail-header" aria-expanded="false" aria-controls="development-content">
+                        <span class="service-number">02</span>
+                        <h3>Product Development</h3>
+                        <span class="service-toggle" aria-hidden="true"></span>
+                    </button>
+                    <div class="service-detail-content" id="development-content">
+                        <p class="service-lead">Turn your idea into a product people actually use.</p>
+                        <p>We build mobile and web applications from concept to launch. Not just code — we think through user experience, technical architecture, and what it takes to maintain and grow the product over time.</p>
+
+                        <div class="service-offerings">
+                            <h4>What we build:</h4>
+                            <ul>
+                                <li><strong>iOS & macOS Apps</strong> — Native Swift applications with modern SwiftUI interfaces</li>
+                                <li><strong>Web Applications</strong> — Full-stack solutions with React, Node.js, Python backends</li>
+                                <li><strong>MVPs & Prototypes</strong> — Quickly validate your idea with a focused, functional product</li>
+                                <li><strong>Existing Product Enhancement</strong> — Add features, improve performance, or modernize legacy systems</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-ideal">
+                            <h4>Ideal for:</h4>
+                            <p>Founders who need a technical partner, businesses without in-house development capacity, or teams that need specialized expertise.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Cloud & Infrastructure -->
+                <article class="service-detail" id="cloud">
+                    <button class="service-detail-header" aria-expanded="false" aria-controls="cloud-content">
+                        <span class="service-number">03</span>
+                        <h3>Cloud & Infrastructure</h3>
+                        <span class="service-toggle" aria-hidden="true"></span>
+                    </button>
+                    <div class="service-detail-content" id="cloud-content">
+                        <p class="service-lead">Build systems that scale without breaking the bank.</p>
+                        <p>Modern applications run on cloud infrastructure, but cloud architecture is complex. Poorly designed systems can be expensive, slow, and fragile. We design and implement infrastructure that's secure, scalable, and cost-effective.</p>
+
+                        <div class="service-offerings">
+                            <h4>How we help:</h4>
+                            <ul>
+                                <li><strong>Cloud Architecture Design</strong> — Design systems on Azure, AWS, or GCP that match your scale and budget</li>
+                                <li><strong>Serverless Implementation</strong> — Build event-driven systems that scale automatically and cost nothing when idle</li>
+                                <li><strong>DevOps & CI/CD</strong> — Automate testing, building, and deployment so you can ship faster with confidence</li>
+                                <li><strong>Cost Optimization</strong> — Audit your cloud spend and implement changes that reduce costs without sacrificing performance</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-ideal">
+                            <h4>Ideal for:</h4>
+                            <p>Businesses migrating to the cloud, startups designing their infrastructure from scratch, or anyone whose cloud bill seems too high.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Growth Strategy -->
+                <article class="service-detail" id="growth">
+                    <button class="service-detail-header" aria-expanded="false" aria-controls="growth-content">
+                        <span class="service-number">04</span>
+                        <h3>Growth Strategy</h3>
+                        <span class="service-toggle" aria-hidden="true"></span>
+                    </button>
+                    <div class="service-detail-content" id="growth-content">
+                        <p class="service-lead">Building it is only half the battle. Now get people to use it.</p>
+                        <p>We've launched and grown our own products. We understand App Store optimization, user acquisition, conversion funnels, and what it actually takes to get downloads and revenue. Not theory — experience.</p>
+
+                        <div class="service-offerings">
+                            <h4>How we help:</h4>
+                            <ul>
+                                <li><strong>App Store Optimization (ASO)</strong> — Improve your app's visibility, conversion rate, and organic downloads</li>
+                                <li><strong>Marketing Strategy</strong> — Develop channel strategies, content plans, and positioning that resonates</li>
+                                <li><strong>Analytics Implementation</strong> — Set up tracking that gives you actionable insights, not just data</li>
+                                <li><strong>Monetization Strategy</strong> — Design pricing, subscription models, and revenue optimization</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-ideal">
+                            <h4>Ideal for:</h4>
+                            <p>App developers struggling with discovery, businesses with good products but flat growth, or anyone who's built something great but can't get traction.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Education & Training -->
+                <article class="service-detail" id="education">
+                    <button class="service-detail-header" aria-expanded="false" aria-controls="education-content">
+                        <span class="service-number">05</span>
+                        <h3>EdTech Solutions</h3>
+                        <span class="service-toggle" aria-hidden="true"></span>
+                    </button>
+                    <div class="service-detail-content" id="education-content">
+                        <p class="service-lead">Make learning engaging through technology.</p>
+                        <p>Education is personal to us. We build applications that make learning more accessible, engaging, and effective — whether that's for schools, corporate training, or individual learners.</p>
+
+                        <div class="service-offerings">
+                            <h4>What we build:</h4>
+                            <ul>
+                                <li><strong>Learning Management Systems</strong> — Custom platforms for delivering and tracking educational content</li>
+                                <li><strong>Interactive Learning Apps</strong> — Mobile and web applications that make learning engaging</li>
+                                <li><strong>Assessment Tools</strong> — Systems for testing, evaluation, and progress tracking</li>
+                                <li><strong>Accessibility Features</strong> — Ensure educational content reaches all learners</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-ideal">
+                            <h4>Ideal for:</h4>
+                            <p>Educational institutions, corporate training departments, EdTech startups, or anyone building learning experiences.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- How We Work -->
+        <section class="section process-section">
+            <div class="container">
+                <h2>How We Work</h2>
+                <p class="section-subtitle">Every engagement is different, but our approach stays consistent.</p>
+
+                <div class="process-grid">
+                    <div class="process-step">
+                        <span class="process-number">1</span>
+                        <h3>Understand</h3>
+                        <p>We start by listening. What are you trying to accomplish? What constraints do you have? What have you already tried?</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-number">2</span>
+                        <h3>Recommend</h3>
+                        <p>Based on what we learn, we propose an approach. We're honest about what will work, what won't, and what trade-offs you'll face.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-number">3</span>
+                        <h3>Execute</h3>
+                        <p>We do the work. Clear communication, regular updates, and no surprises. You'll always know where things stand.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-number">4</span>
+                        <h3>Support</h3>
+                        <p>Launch is just the beginning. We're here to help you iterate, improve, and grow after the initial project is complete.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-block">
+                    <h2>Ready to start?</h2>
+                    <p>Tell us about your project. We'll have an honest conversation about whether we're the right fit — and if we're not, we'll point you in the right direction.</p>
+                    <a href="/contact/" class="btn btn-primary btn-large">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Okeke LLC</span>
+                    <p>Building software. Helping businesses grow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/services/">Services</a>
+                    <a href="/research/">Research</a>
+                    <a href="/apps/">Apps</a>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Okeke LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Service accordion toggle
+        const serviceHeaders = document.querySelectorAll('.service-detail-header');
+        serviceHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const isExpanded = header.getAttribute('aria-expanded') === 'true';
+                header.setAttribute('aria-expanded', !isExpanded);
+                header.parentElement.classList.toggle('expanded', !isExpanded);
+            });
+        });
+
+        // Snowfall Animation
+        const canvas = document.getElementById('snowfall');
+        const ctx = canvas.getContext('2d');
+        let snowflakes = [];
+        const maxSnowflakes = 100;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function createSnowflake() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height - canvas.height,
+                radius: Math.random() * 3 + 1,
+                speed: Math.random() * 1 + 0.5,
+                wind: Math.random() * 0.5 - 0.25,
+                opacity: Math.random() * 0.2 + 0.15
+            };
+        }
+
+        function initSnowflakes() {
+            snowflakes = [];
+            for (let i = 0; i < maxSnowflakes; i++) {
+                const flake = createSnowflake();
+                flake.y = Math.random() * canvas.height;
+                snowflakes.push(flake);
+            }
+        }
+
+        function drawSnowflakes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            snowflakes.forEach((flake, index) => {
+                ctx.beginPath();
+                ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(173, 216, 230, ${flake.opacity})`;
+                ctx.fill();
+                flake.y += flake.speed;
+                flake.x += flake.wind;
+                if (flake.y > canvas.height) snowflakes[index] = createSnowflake();
+                if (flake.x > canvas.width) flake.x = 0;
+                else if (flake.x < 0) flake.x = canvas.width;
+            });
+            requestAnimationFrame(drawSnowflakes);
+        }
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReducedMotion) {
+            resizeCanvas();
+            initSnowflakes();
+            drawSnowflakes();
+            window.addEventListener('resize', () => { resizeCanvas(); initSnowflakes(); });
+        }
+    </script>
+</body>
+</html>
