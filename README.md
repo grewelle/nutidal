@@ -1,60 +1,18 @@
-# Okeke LLC Website
+# Portfolio Website Template
 
-**Live URL:** https://okeke.us
-**Stack:** Static HTML/CSS/JS
-**Hosting:** Azure Static Web Apps
+A free, modern portfolio website template for developers, consultants, and software companies. Built with clean HTML, CSS, and vanilla JavaScript — no build tools required.
 
----
-
-## Project Structure
-
-```
-okeke.us/
-├── index.html                    # Homepage
-├── styles.css                    # Global stylesheet
-├── robots.txt                    # Search engine directives (incl. AI crawlers)
-├── sitemap.xml                   # XML sitemap with lastmod dates
-│
-├── services/
-│   ├── index.html                # Services page
-│   └── services.css
-│
-├── research/
-│   ├── index.html                # Research & Technology page
-│   └── research.css
-│
-├── apps/
-│   ├── index.html                # All Apps overview
-│   ├── apps.css
-│   ├── app-page.css              # Shared styles for individual app pages
-│   ├── aircontrolla/index.html   # AirControlla landing page
-│   ├── moviemaker/index.html     # Movie Maker landing page
-│   └── scanprice/index.html      # ScanPrice landing page
-│
-├── about/
-│   ├── index.html                # About page
-│   └── about.css
-│
-├── contact/
-│   ├── index.html                # Contact page
-│   └── contact.css
-│
-└── Google-Business-Profile-Setup-Guide.docx  # SEO setup guide (can remove from deploy)
-```
+**[Live Demo](https://nice-coast-0382e4910.1.azurestaticapps.net)** | **[Used by Okeke LLC](https://okeke.us)**
 
 ---
 
-## Pages Overview
+## Screenshots
 
-| Page | URL | Purpose |
-|------|-----|---------|
-| Homepage | `/` | Hero, services overview, featured apps, about preview |
-| Services | `/services/` | Detailed service offerings (5 services) |
-| Research | `/research/` | Technology focus areas and stack |
-| Apps | `/apps/` | Portfolio of all published apps |
-| About | `/about/` | Company story, values, expertise |
-| Contact | `/contact/` | Contact info and methods |
-| App Pages | `/apps/{appname}/` | Individual app landing pages |
+![Homepage Hero](screenshots/homepage-hero.png)
+
+![Apps Page](screenshots/apps-page.png)
+
+![CTA Section](screenshots/cta-footer.png)
 
 ---
 
@@ -62,55 +20,67 @@ okeke.us/
 
 ### Design
 - Clean, professional design with Inter font
-- Light blue snowfall animation (respects `prefers-reduced-motion`)
-- Fully responsive (mobile hamburger menu)
-- Consistent navigation and footer across all pages
+- Subtle snowfall animation (respects `prefers-reduced-motion`)
+- Fully responsive with mobile hamburger menu
+- Two-column hero layout with image
+- Collapsible service sections
 
-### SEO & Discoverability
-- **Structured Data:** ProfessionalService schema on homepage
-- **Open Graph & Twitter Cards:** Social sharing optimization
-- **Sitemap:** XML sitemap with lastmod dates
-- **robots.txt:** Explicitly allows all major AI crawlers:
-  - Google (Googlebot, Google-Extended)
-  - OpenAI (GPTBot, ChatGPT-User)
-  - Anthropic (Claude)
-  - Microsoft (Bingbot)
-  - Perplexity, Meta, Apple, and more
-- **Canonical URLs:** Trailing slash consistency
+### Pages Included
+| Page | Description |
+|------|-------------|
+| **Homepage** | Hero section, services overview, featured apps, about preview |
+| **Services** | Detailed service offerings with collapsible sections |
+| **Research** | Technology focus areas and expertise |
+| **Apps** | Portfolio showcase for consumer & business apps |
+| **About** | Company story, values, and stats |
+| **Contact** | Contact form with spam protection |
 
-### Accessibility
-- Semantic HTML structure
-- ARIA labels on interactive elements
-- Alt text for images
-- Keyboard navigable
+### SEO & AI Optimized
+- Schema.org structured data (ProfessionalService, WebSite)
+- Open Graph & Twitter Card meta tags
+- XML sitemap with priority levels
+- AI crawler friendly (`robots.txt` allows GPTBot, Claude, Perplexity, etc.)
+- Semantic HTML with ARIA labels
+
+### Contact Form
+- Powered by [Formspree](https://formspree.io) (free tier: 50 submissions/month)
+- Honeypot spam protection (no annoying CAPTCHAs)
+- Grouped reason dropdown (Development, Consulting, Growth)
+- Optional company field
+- Mobile-responsive layout
 
 ---
 
-## App Store Integration
+## Quick Start
 
-App icons are loaded directly from Apple's CDN (mzstatic.com). To update:
-
-### Your App IDs
-| App | App ID |
-|-----|--------|
-| AirControlla | 6467008935 |
-| Movie Maker | 6755254508 |
-| ScanPrice | 6755891772 |
-| Mini Business Manager | 6502629041 |
-| .Scroll | 6737844498 |
-| PixelLearn | 6739592041 |
-
-### Get Icon URLs
+### 1. Clone the repo
 ```bash
-# Lookup any app
-curl "https://itunes.apple.com/lookup?id=6755254508" | jq '.results[0].artworkUrl512'
+git clone https://github.com/okekedev/portfoliotemplate.git
+cd portfoliotemplate
 ```
+
+### 2. Run locally
+```bash
+# Python
+python -m http.server 8000
+
+# Or Node.js
+npx serve .
+
+# Visit http://localhost:8000
+```
+
+### 3. Customize
+- Update company name, colors, and content
+- Replace images in `/images/`
+- Set up your Formspree form (see below)
 
 ---
 
 ## Customization
 
-### Colors (styles.css)
+### Colors
+Edit `styles.css`:
 ```css
 :root {
     --color-primary: #2563eb;    /* Blue accent */
@@ -119,58 +89,111 @@ curl "https://itunes.apple.com/lookup?id=6755254508" | jq '.results[0].artworkUr
 }
 ```
 
-### Snowfall Animation
-Located in each HTML file's `<script>` section:
-- Color: `rgba(173, 216, 230, opacity)` (light blue)
-- Particles: 100
-- Disabled for `prefers-reduced-motion`
+### Contact Form Setup
+1. Create a free account at [formspree.io](https://formspree.io)
+2. Create a new form
+3. Copy your form ID
+4. Replace in `contact/index.html`:
+```html
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+```
 
-### Contact Info
-Update in all pages if changed:
-- Email: `contact@okeke.us`
-- LinkedIn: `https://www.linkedin.com/company/okeke-llc/`
+### Snowfall Animation
+In each HTML file's `<script>` section:
+```javascript
+// Adjust opacity (0.15-0.35 = subtle, increase for more visible)
+opacity: Math.random() * 0.2 + 0.15
+
+// Adjust particle count
+const maxSnowflakes = 100;
+```
+
+### Adding Your Apps
+Update the apps section with your own projects. App icons can be loaded from Apple's CDN:
+```bash
+# Get icon URL for any App Store app
+curl "https://itunes.apple.com/lookup?id=YOUR_APP_ID" | jq '.results[0].artworkUrl512'
+```
 
 ---
 
 ## Deployment
 
-See `AZURE-DEPLOY.md` for full Azure Static Web Apps deployment instructions.
-
-### Quick Deploy (GitHub)
-1. Push to GitHub
-2. Create Azure Static Web App
-3. Connect repo, set app location to `/`
-4. Auto-deploys on push to main
-
----
-
-## Post-Launch Checklist
-
-- [ ] Verify site at https://okeke.us
-- [ ] Submit sitemap to Google Search Console
-- [ ] Create Google Business Profile (see included guide)
-- [ ] Set up Bing Webmaster Tools
-- [ ] Add to LinkedIn company page
-- [ ] Request reviews from clients
-
----
-
-## Local Development
-
-No build step required. Open any HTML file directly or use a local server:
-
+### Azure Static Web Apps (Recommended)
 ```bash
-# Python
-python -m http.server 8000
+# Install Azure CLI if needed
+# brew install azure-cli
 
-# Node.js
-npx serve .
+# Login
+az login
 
-# Then visit http://localhost:8000
+# Create resource group
+az group create --name website-rg --location "Central US"
+
+# Create static web app (uses your GitHub token)
+GH_TOKEN=$(gh auth token) && az staticwebapp create \
+  --name your-site-name \
+  --resource-group website-rg \
+  --source https://github.com/YOUR_USERNAME/portfoliotemplate \
+  --branch main \
+  --app-location "/" \
+  --output-location "/" \
+  --token "$GH_TOKEN"
 ```
+
+Auto-deploys on every push to `main`.
+
+### Other Platforms
+Works with any static hosting:
+- **Netlify**: Drag & drop or connect GitHub
+- **Vercel**: Import from GitHub
+- **GitHub Pages**: Enable in repo settings
+- **Cloudflare Pages**: Connect GitHub repo
+
+---
+
+## Project Structure
+
+```
+portfoliotemplate/
+├── index.html              # Homepage
+├── styles.css              # Global styles
+├── robots.txt              # SEO (allows AI crawlers)
+├── sitemap.xml             # XML sitemap
+├── staticwebapp.config.json # Azure config
+│
+├── services/               # Services page
+├── research/               # Research/tech page
+├── apps/                   # Apps portfolio
+│   ├── aircontrolla/       # Individual app pages
+│   ├── moviemaker/
+│   └── scanprice/
+├── about/                  # About page
+├── contact/                # Contact page with form
+├── images/                 # Site images
+└── screenshots/            # README screenshots
+```
+
+---
+
+## Credits
+
+This template was created for [Okeke LLC](https://okeke.us), a software development and consulting company. We built it for our own site and decided to share it as a free template for the community.
+
+**Built with:**
+- [Inter Font](https://fonts.google.com/specimen/Inter)
+- [Formspree](https://formspree.io) for contact forms
+- [Azure Static Web Apps](https://azure.microsoft.com/en-us/products/app-service/static) for hosting
 
 ---
 
 ## License
 
-© 2026 Okeke LLC. All rights reserved.
+This project is available under a Research and Educational Use License. See [LICENSE](LICENSE) for details.
+
+**Summary:**
+- Free for personal, educational, and research use
+- Commercial use requires permission
+- Attribution appreciated but not required
+
+For commercial licensing, contact: contact@okeke.us
