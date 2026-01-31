@@ -71,32 +71,72 @@
                         <h2>Send Us a Message</h2>
                         <p>Fill out the form below and we'll get back to you within 24-48 hours.</p>
 
-                        <form class="contact-form" action="https://formspree.io/f/contact@okeke.us" method="POST">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Your name">
+                        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                            <!-- Honeypot field - hidden from users, catches bots -->
+                            <input type="text" name="_gotcha" style="display:none">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name <span class="required">*</span></label>
+                                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required placeholder="john@company.com">
+                                </div>
                             </div>
+
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                                <label for="company">Company <span class="optional">(optional)</span></label>
+                                <input type="text" id="company" name="company" placeholder="Your company name">
                             </div>
+
                             <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <select id="subject" name="subject" required>
-                                    <option value="">Select a topic...</option>
-                                    <option value="Custom Development">Custom Development</option>
-                                    <option value="Technical Consulting">Technical Consulting</option>
-                                    <option value="Cloud & Infrastructure">Cloud & Infrastructure</option>
-                                    <option value="Growth Strategy">Growth Strategy</option>
-                                    <option value="Partnership">Partnership Opportunities</option>
-                                    <option value="Other">Other</option>
+                                <label for="reason">How can we help? <span class="required">*</span></label>
+                                <select id="reason" name="reason" required>
+                                    <option value="">Select a reason...</option>
+                                    <optgroup label="Development">
+                                        <option value="iOS/macOS App Development">iOS/macOS App Development</option>
+                                        <option value="Web Application">Web Application</option>
+                                        <option value="MVP/Prototype">MVP or Prototype</option>
+                                    </optgroup>
+                                    <optgroup label="Consulting">
+                                        <option value="Technical Consulting">Technical Consulting</option>
+                                        <option value="Architecture Review">Architecture Review</option>
+                                        <option value="Cloud & Infrastructure">Cloud & Infrastructure</option>
+                                    </optgroup>
+                                    <optgroup label="Growth">
+                                        <option value="App Store Optimization">App Store Optimization</option>
+                                        <option value="Marketing Strategy">Marketing Strategy</option>
+                                    </optgroup>
+                                    <optgroup label="Other">
+                                        <option value="Partnership">Partnership Opportunity</option>
+                                        <option value="General Inquiry">General Inquiry</option>
+                                    </optgroup>
                                 </select>
                             </div>
+
                             <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project or question..."></textarea>
+                                <label for="budget">Budget Range <span class="optional">(optional)</span></label>
+                                <select id="budget" name="budget">
+                                    <option value="">Prefer not to say</option>
+                                    <option value="< $5,000">Less than $5,000</option>
+                                    <option value="$5,000 - $15,000">$5,000 - $15,000</option>
+                                    <option value="$15,000 - $50,000">$15,000 - $50,000</option>
+                                    <option value="$50,000+">$50,000+</option>
+                                    <option value="Ongoing/Retainer">Ongoing / Retainer</option>
+                                </select>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+
+                            <div class="form-group">
+                                <label for="message">Tell us about your project <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required placeholder="What are you looking to build? What challenges are you facing? Any timeline considerations?"></textarea>
+                            </div>
+
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                                <p class="form-note">We typically respond within 24-48 hours.</p>
+                            </div>
                         </form>
 
                         <div class="contact-alt">

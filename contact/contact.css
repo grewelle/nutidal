@@ -105,8 +105,57 @@
     min-height: 120px;
 }
 
-.contact-form .btn {
-    align-self: flex-start;
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.form-group label .required {
+    color: #e53935;
+}
+
+.form-group label .optional {
+    color: var(--color-text-light);
+    font-weight: 400;
+    font-size: 0.8125rem;
+}
+
+.form-group select optgroup {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.form-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-footer .btn {
+        width: 100%;
+    }
+
+    .form-note {
+        text-align: center;
+    }
 }
 
 /* Contact Alt */
